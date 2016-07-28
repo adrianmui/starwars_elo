@@ -4,6 +4,4 @@ Rails.application.routes.draw do
   resources :players
   resources :rankings
   
-
-  get '/rankings' => 'rankings#index'
 end

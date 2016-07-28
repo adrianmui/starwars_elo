@@ -4,6 +4,7 @@ class CreatePlayers < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :height
       t.integer :mass
+      t.integer :elo_rating, :default => 1200
       t.string :birth_year
       t.string :gender
       t.string :homeworld
