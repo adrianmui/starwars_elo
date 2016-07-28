@@ -1,1 +1,18 @@
-Hello this is index
+<h1> Star Wars ELO Rankings <h1>
+
+
+<form action="<%= root_path %>" method="get">
+  <h5> Which character is better? </h5>
+  <%= render partial: "/shared/player_form", locals: { player: @player_one } %>
+  <input type="radio" name="id" 
+        value="<%= @player_one.id %>,<%= @player_two.id %>" >
+
+
+  <%= render partial: "/shared/player_form", locals: { player: @player_two } %>
+  <input type="radio" name="id" 
+        value="<%= @player_two.id %>, <%= @player_one.id %>" >
+
+  <br>
+  <input type="submit" value="Submit Contest!">
+  <input name="authenticity_token" type="hidden" value="NrOp5bsjoLRuK8IW5+dQEYjKGUJDe7TQoZVvq95Wteg=" />
+</form>
