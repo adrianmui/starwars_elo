@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 group :production do
-  gem 'pg', '~>0.18.4'
+  gem 'pg'
 end
 
 #api for swap
