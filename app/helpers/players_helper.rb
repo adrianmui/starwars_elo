@@ -17,4 +17,14 @@ module PlayersHelper
     @player.homeworld  = hash["homeworld"]
     @player.save
   end
+
+  def get_player_id_list_from_movie(id)
+    JSON.parse(Swapi.get_film(1))["characters"].map{ |x| x.scan(/\d{1,2}/)[0].to_i }
+  end
+
+  def save_all_players_from_movie(id_arr)
+    id_arr.each do |id|
+      save_player(get_person(id))
+    end
+  end
 end

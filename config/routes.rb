@@ -2,5 +2,8 @@ Rails.application.routes.draw do
   root to: 'players#index'
 
   resources :players
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :rankings
+  
+
+  get '/rankings' => 'rankings#index'
 end
