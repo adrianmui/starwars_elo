@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'players#edit'
+  root to: root_path
 
   resources :players, :only =>[:index, :new, :edit]
   resources :rankings, :only =>[:index]
