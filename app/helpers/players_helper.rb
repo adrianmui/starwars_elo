@@ -1,2 +1,20 @@
 module PlayersHelper
+  def get_all(type)
+    JSON.parse(Swapi.get_all(type.to_s))
+  end
+
+  def get_person(id)
+    JSON.parse(Swapi.get_person(id))
+  end
+
+  def save_player(hash)
+    @player = Player.new
+    @player.name = hash["name"]
+    @player.height =  hash["height"].to_i
+    @player.mass = hash["mass"].to_i
+    @player.birth_year = hash["birth_year"]
+    @player.gender = hash["gender"]
+    @player.homeworld  = hash["homeworld"]
+    @player.save
+  end
 end
