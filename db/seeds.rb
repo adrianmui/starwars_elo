@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+a = Player.new()
+a.name = "adrian"
+a.height = 100
+a.mass = 100
+a.birth_year = "052695"
+a.gender = "male"
+a.homeworld = "Earth"
+a.save
